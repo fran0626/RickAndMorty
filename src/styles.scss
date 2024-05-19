@@ -1,1 +1,297 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'Get Schwifty';
+  src: '';
+}
+
+html {
+  background-color: #2dade9;
+}
+
+body{
+  background-color: #2dade9;
+}
+
+header {
+  // position: sticky;
+  top: 0;
+  display: flex;
+  width: 100%;
+  padding: 8px 24px;
+  z-index: 4;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+header .logo {
+  height: 100px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  z-index: 0;
+  font-size: 1px; }
+  header .logo img {
+    height: 100%;
+    width: auto; }
+  header .logo span {
+    position: absolute;
+    text-indent: -99999px;
+    right: 0;
+}
+
+.characters-container {
+  max-width: 100%;
+  overflow-x: auto; /* Permite desplazamiento horizontal si es necesario */
+  margin-bottom: 20px; /* Espacio entre las tarjetas y la paginación */
+}
+
+.characters--grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 15px;
+  margin-top: 1%;
+  margin-left: 0.5%;
+}
+
+.character-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000;
+  border-radius: 10%;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2vh;
+  transition: transform 0.3s ease;
+  width: 90vw;
+  max-width: 280px;
+}
+
+.character-card:hover {
+  transform: scale(1.05);
+}
+
+.character-card img {
+  object-fit: cover;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.info {
+  padding: 10px;
+}
+
+.info h2, .info p {
+  margin: 0;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* Espacio entre las tarjetas y la paginación */
+}
+
+.page-item {
+  margin: 0 5px;
+}
+
+.page-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 1;
+  border: 1px solid #ccc;
+  text-decoration: none;
+  background-color: #145C9E;
+  color: #fff;
+}
+
+.page-link.active {
+  background-color: #F0EC57;
+  color: #fff;
+}
+
+.btn-primary{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000;
+  background-color: #1DD3B0;
+  font-family: 'Get Schwifty', sans-serif;
+}
+
+.btn-secondary{
+  position: absolute;
+  top: 127%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #1DD3B0;
+}
+
+nav {
+  position: absolute;
+  top: 130%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.imagen {
+  text-align: center;
+}
+
+.imagen img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.image-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.main-image {
+  width: 34%;
+  height: auto;
+  margin: 0;
+  z-index: 1;
+  position: relative;
+}
+
+#eyes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Para que los ojos no interfieran con otros elementos interactivos */
+}
+
+.eye {
+  position: absolute;
+  width: 7%; /* Ajusta el tamaño relativo a la imagen principal */
+  z-index: 2;
+}
+
+
+.description-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2vh;
+  transition: transform 0.3s ease;
+  // width: 90vw;
+  // max-width: 280px;
+  display: flex;
+  width: 90%;
+  background-color: white;
+  padding: 20px;
+}
+
+.left-side {
+  flex: 1; /* Hace que esta parte ocupe el 50% del contenedor */
+  padding: 20px;
+}
+
+.right-side {
+  flex: 1; /* Hace que esta parte ocupe el 50% del contenedor */
+  position: relative;
+}
+
+.character-info {
+  position: absolute;
+  top: 75%;
+  left: 20px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+  backdrop-filter: blur(10px);
+  color: #fff;
+}
+
+.character-image {
+  width: 100%;
+  height: auto;
+}
+
+.spinner-border {
+  position: fixed;
+  height: 50px;
+  width: 50px;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  color: #000;
+}
+
+.spinner-border::before {
+  content: '';
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Color de fondo gris con opacidad */
+}
+
+
+
+/* Tablets */
+@media screen and (min-width: 40em) {
+  .characters--grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 15px;
+  }
+
+  .main-image {
+    width: 30%;
+  }
+
+  .eye {
+    width: 6%; /* Ajusta el tamaño relativo a la imagen principal */
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 62em) {
+  .characters--grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 15px;
+  }
+
+  .main-image {
+    width: 40%;
+  }
+
+  .eye {
+    width: 5%; /* Ajusta el tamaño relativo a la imagen principal */
+  }
+
+
+
+}

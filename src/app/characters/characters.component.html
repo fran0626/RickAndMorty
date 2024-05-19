@@ -1,0 +1,32 @@
+<app-header></app-header>
+
+<div class="character-container">
+  <div class="characters--grid" >
+    <div *ngFor="let character of characters">
+      <div class="character-card" (click)="viewDescription(character.id)">
+        <img [src]="character.image" alt="{{ character.name }}" />
+        <div class="info">
+          <p><strong>{{ character.name }}</strong></p>
+          <p>{{ character.location?.name }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Paginación -->
+<div class="pagination-container">
+  <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+      <li class="page-item" [class.disabled]="page === 1">
+        <a (click)="loadPage(page - 1)" class="page-link">&lt;&lt;</a>
+      </li>
+      <li *ngFor="let pageNumber of getPageNumbers()" class="page-item">
+        <a (click)="loadPage(pageNumber)" class="page-link" [class.active]="pageNumber === page">{{ pageNumber }}</a>
+      </li>
+      <li class="page-item" [class.disabled]="page === totalPages">
+        <a (click)="loadPage(page + 1)" class="page-link">&gt;&gt;</a>
+      </li>
+    </ul>
+  </nav>
+</div>
