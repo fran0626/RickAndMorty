@@ -114,7 +114,8 @@ header .logo {
   color: #fff;
 }
 
-.btn-primary{
+
+.btn-primary {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -123,6 +124,7 @@ header .logo {
   background-color: #1DD3B0;
   font-family: 'Get Schwifty', sans-serif;
 }
+
 
 .btn-secondary{
   position: absolute;
@@ -327,7 +329,44 @@ nav {
   }
 
   .main-image {
-    width: 40%;
+    width: 35%;
+  }
+
+  .eye {
+    width: 2.5%; /* Ajusta el tamaño relativo a la imagen principal */
+  }
+
+  /* Ajustes de posición */
+  #eye1 {
+    top: 65%;
+    left: 9%;
+  }
+
+  #eye2 {
+    top: 63%;
+    left: 15%;
+  }
+
+  #eye3 {
+    top: 32%;
+    left: 22.5%;
+  }
+
+  #eye4 {
+    top: 32%;
+    left: 27%;
+  }
+
+}
+
+
+/* Mobile */
+@media screen and (max-width: 39.99em) {
+  .main-image {
+    width: 50%; /* Ajusta el tamaño para móviles */
+    position: relative; /* Agregado */
+    top: 50%; /* Ajustado para subir la imagen */
+    transform: translateY(-10%); /* Ajustado para centrar verticalmente */
   }
 
   .eye {
@@ -336,57 +375,23 @@ nav {
 
   /* Ajustes de posición */
   #eye1 {
-    top: 65%;
-    left: 10.5%;
+    top: 55%; /* Ajusta según sea necesario */
+    left: 13%;
   }
 
   #eye2 {
-    top: 62%;
-    left: 17%;
+    top: 52%; /* Ajusta según sea necesario */
+    left: 22%;
   }
 
   #eye3 {
-    top: 32%;
-    left: 25.5%;
+    top: 22%; /* Ajusta según sea necesario */
+    left: 32%;
   }
 
   #eye4 {
-    top: 32%;
-    left: 31%;
-  }
-
-//FALTA ARREGLAR MOBILE
-/* Mobile */
-@media only screen and (max-width: 575px) {
-  .main-image {
-    width: 50%; /* Ajusta el tamaño para móviles */
-  }
-
-  .eye {
-    width: 20%; /* Ajusta el tamaño relativo a la imagen principal */
-  }
-
-  /* Ajustes de posición */
-  #eye1 {
-    top: 65%;
-    left: 13.5%;
-  }
-
-  #eye2 {
-    top: 62%;
-    left: 20%;
-  }
-
-  #eye3 {
-    top: 32%;
-    left: 28.5%;
-  }
-
-  #eye4 {
-    top: 32%;
-    left: 34%;
+    top: 22%; /* Ajusta según sea necesario */
+    left: 39%;
   }
 }
 
-
-}
