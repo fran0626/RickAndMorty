@@ -189,6 +189,27 @@ nav {
   z-index: 2;
 }
 
+/* Especificar las posiciones relativas */
+#eye1 {
+  top: 65%;
+  left: 13.5%;
+}
+
+#eye2 {
+  top: 62%;
+  left: 20%;
+}
+
+#eye3 {
+  top: 32%;
+  left: 28.5%;
+}
+
+#eye4 {
+  top: 32%;
+  left: 34%;
+}
+
 
 .description-container {
   display: flex;
@@ -272,7 +293,28 @@ nav {
   }
 
   .eye {
-    width: 6%; /* Ajusta el tamaño relativo a la imagen principal */
+    width: 2%; /* Ajusta el tamaño relativo a la imagen principal */
+  }
+
+  /* Ajustes de posición */
+  #eye1 {
+    top: 65%;
+    left: 8%;
+  }
+
+  #eye2 {
+    top: 62%;
+    left: 12.5%;
+  }
+
+  #eye3 {
+    top: 32%;
+    left: 19.5%;
+  }
+
+  #eye4 {
+    top: 32%;
+    left: 23%;
   }
 }
 
@@ -292,6 +334,59 @@ nav {
     width: 3%; /* Ajusta el tamaño relativo a la imagen principal */
   }
 
+  /* Ajustes de posición */
+  #eye1 {
+    top: 65%;
+    left: 10.5%;
+  }
+
+  #eye2 {
+    top: 62%;
+    left: 17%;
+  }
+
+  #eye3 {
+    top: 32%;
+    left: 25.5%;
+  }
+
+  #eye4 {
+    top: 32%;
+    left: 31%;
+  }
+
+//FALTA ARREGLAR MOBILE
+/* Mobile */
+@media only screen and (max-width: 575px) {
+  .main-image {
+    width: 50%; /* Ajusta el tamaño para móviles */
+  }
+
+  .eye {
+    width: 20%; /* Ajusta el tamaño relativo a la imagen principal */
+  }
+
+  /* Ajustes de posición */
+  #eye1 {
+    top: 65%;
+    left: 13.5%;
+  }
+
+  #eye2 {
+    top: 62%;
+    left: 20%;
+  }
+
+  #eye3 {
+    top: 32%;
+    left: 28.5%;
+  }
+
+  #eye4 {
+    top: 32%;
+    left: 34%;
+  }
+}
 
 
 }
