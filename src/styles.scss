@@ -3,24 +3,25 @@
   src: '';
 }
 
-html {
+html, body {
   background-color: #2dade9;
+  margin: 0;
+  padding: 0;
 }
 
-body{
-  background-color: #2dade9;
-}
 
 header {
   background-color: #2dade9;
   position: sticky;
   top: 0;
+  left: 50%;
   display: flex;
-  width: 100%;
+  width: 100vw; // Utilizamos 100vw para ocupar todo el ancho de la ventana gráfica
   padding: 0px 24px;
-  z-index: 4;
+  z-index: 9999;
   box-sizing: border-box;
   justify-content: center;
+
 }
 
 header .logo {
@@ -115,13 +116,16 @@ header .logo {
 
 .btn-primary {
   position: absolute;
-  top: 50%;
+  top: 20%;
   left: 50%;
+  width: 30%;
+  height: 10%;
   transform: translate(-50%, -50%);
   color: #000;
   background-color: #1DD3B0;
   font-family: 'Get Schwifty', sans-serif;
   z-index: 3;
+  font-size: 200%;
 }
 
 
@@ -231,42 +235,11 @@ header .logo {
   backdrop-filter: blur(10px);
   color: #fff;
   font-size: 1em; /* Tamaño de fuente base */
-
-  /* Tablet */
-  @media screen and (min-width: 40em) {
-    top: 70%;
-    width: 90%; /* Ancho mayor para tabletas */
-    font-size: 0.9em; /* Tamaño de fuente para tabletas */
-  }
-
-  /* Desktop */
-  @media screen and (min-width: 62em) {
-    top: 70%;
-    width: 70%; /* Ancho mayor para escritorio */
-    font-size: 1em; /* Tamaño de fuente para escritorio */
-  }
-
-  /* Mobile */
-  @media screen and (max-width: 39.99em) {
-    top: 65%;
-    width: 95%; /* Ancho mayor para móviles */
-    font-size: 0.8em; /* Tamaño de fuente para móviles */
-  }
 }
 
 .character-image {
   width: 100%;
   height: auto;
-
-  /* Tablet */
-  @media screen and (min-width: 40em) {
-    width: 90%;
-  }
-
-  /* Mobile */
-  @media screen and (max-width: 39.99em) {
-    width: 100%;
-  }
 }
 
 
@@ -324,6 +297,22 @@ header .logo {
   .pagination-container {
     margin-top: 50px;
   }
+
+  .character-info {
+
+  }
+
+  .character-image {
+
+  }
+
+  header {
+
+  }
+
+  .btn-primary {
+    //font-size: 100%;
+  }
 }
 
 /* Desktop */
@@ -362,6 +351,14 @@ header .logo {
 
   .pagination-container {
     margin-top: 50px;
+  }
+
+  .character-info {
+
+  }
+
+  .character-image {
+
   }
 }
 
@@ -403,5 +400,17 @@ header .logo {
 
   .pagination-container {
     margin-top: 30px;
+  }
+
+  .character-info {
+
+  }
+
+  .character-image {
+
+  }
+
+  .btn-primary {
+    font-size: 100%;
   }
 }
