@@ -6,9 +6,9 @@ import { InputService } from '../services/input.service';
 
 @Component({
   selector: 'app-character-description',
-  templateUrl: './character-description.component.html',
-  styleUrl: './character-description.component.scss'
+  templateUrl: './character-description.component.html'
 })
+
 export class CharacterDescriptionComponent implements OnInit{
 
   character!: CharacterModel;

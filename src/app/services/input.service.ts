@@ -11,17 +11,22 @@ export class InputService {
   }
 
   showLoading(): void {
-    let el = this.document.createElement('div');
-    el.classList.add('spinner-border', 'show');
-    (this.document.getElementsByTagName('body')[0]).appendChild(el);
+    if (!this.document.querySelector('.spinner-border')) {
+      let el = this.document.createElement('div');
+      el.classList.add('spinner-border', 'show');
+      el.style.position = 'fixed';
+      el.style.top = '50%';
+      el.style.left = '50%';
+      el.style.transform = 'translate(-50%, -50%)';
+      this.document.body.appendChild(el);
+    }
   }
 
   hideLoading(): void {
-    let el = this.document.getElementsByClassName('spinner-border')[0];
+    let el = this.document.querySelector('.spinner-border');
     if (el) {
       el.remove();
     }
   }
-
 
 }

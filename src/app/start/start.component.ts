@@ -3,8 +3,7 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-start',
-  templateUrl: './start.component.html',
-  styleUrls: ['./start.component.scss']
+  templateUrl: './start.component.html'
 })
 
 export class StartComponent implements OnInit {
@@ -22,8 +21,6 @@ export class StartComponent implements OnInit {
   start(): void {
     this.router.navigate(['/characters']);
   }
-
-  //ENTENDER CÓDIGO Y CORREGIR
 
   mouseMovement(): void {
     this.renderer.listen(this.el.nativeElement, 'mousemove', (event) => {

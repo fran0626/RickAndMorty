@@ -6,8 +6,7 @@ import { InputService } from '../services/input.service';
 
 @Component({
   selector: 'app-characters',
-  templateUrl: './characters.component.html',
-  styleUrls: ['./characters.component.scss']
+  templateUrl: './characters.component.html'
 })
 export class CharactersComponent implements OnInit {
 
@@ -24,10 +23,8 @@ export class CharactersComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.getCharacters(0, 10);
     this.inputService.showLoading();
-    this.page = 1;
-    this.totalPages = 0;
+    this.getCharacters(0, 10);
   }
 
   getCharacters(start: number, end: number) {
