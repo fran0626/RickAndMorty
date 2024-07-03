@@ -6,27 +6,31 @@ import { DOCUMENT } from '@angular/common';
 })
 export class InputService {
 
-  constructor(@Inject(DOCUMENT) private document: any) {
+  private overlayElement!: HTMLElement;
 
-  }
+  constructor(@Inject(DOCUMENT) private document: any) {}
 
   showLoading(): void {
-    if (!this.document.querySelector('.spinner-border')) {
-      let el = this.document.createElement('div');
-      el.classList.add('spinner-border', 'show');
-      el.style.position = 'fixed';
-      el.style.top = '50%';
-      el.style.left = '50%';
-      el.style.transform = 'translate(-50%, -50%)';
-      this.document.body.appendChild(el);
+    if (!this.overlayElement) {
+      this.overlayElement = this.document.createElement('div');
+      this.overlayElement.classList.add('loading-overlay');
+
+      let spinner = this.document.createElement('div');
+      spinner.classList.add('spinner-border', 'show');
+      spinner.style.position = 'absolute';
+      spinner.style.top = '50%';
+      spinner.style.left = '50%';
+      spinner.style.transform = 'translate(-50%, -50%)';
+      this.overlayElement.appendChild(spinner);
+
+      this.document.body.appendChild(this.overlayElement);
     }
   }
 
   hideLoading(): void {
-    let el = this.document.querySelector('.spinner-border');
-    if (el) {
-      el.remove();
+    if (this.overlayElement && this.overlayElement.parentElement) {
+      this.overlayElement.parentElement.removeChild(this.overlayElement);
+      this.overlayElement = null!;
     }
   }
-
 }
