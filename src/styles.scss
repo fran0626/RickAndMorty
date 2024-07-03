@@ -9,19 +9,16 @@ html, body {
   padding: 0;
 }
 
-
 header {
   background-color: #2dade9;
   position: sticky;
   top: 0;
-  left: 50%;
   display: flex;
-  width: 100vw; // Utilizamos 100vw para ocupar todo el ancho de la ventana gráfica
+  width: 100vw; /* Utilizamos 100vw para ocupar todo el ancho de la ventana gráfica */
   padding: 0px 24px;
   z-index: 9999;
   box-sizing: border-box;
   justify-content: center;
-
 }
 
 header .logo {
@@ -29,11 +26,13 @@ header .logo {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  z-index: 0;
-  font-size: 1px; }
-  header .logo img {
-    height: 100%;
-    width: auto; }
+  font-size: 1px;
+}
+
+header .logo img {
+  height: 100%;
+  width: auto;
+}
 
 .characters-container {
   max-width: 100%;
@@ -61,6 +60,7 @@ header .logo {
   transition: transform 0.3s ease;
   width: 90vw;
   max-width: 280px;
+  height: auto;
 }
 
 .character-card:hover {
@@ -71,6 +71,7 @@ header .logo {
   object-fit: cover;
   border-radius: 10px;
   width: 100%;
+  height: auto;
 }
 
 .info {
@@ -113,7 +114,6 @@ header .logo {
   color: #fff;
 }
 
-
 .btn-primary {
   position: absolute;
   top: 20%;
@@ -128,8 +128,7 @@ header .logo {
   font-size: 200%;
 }
 
-
-.btn-secondary{
+.btn-secondary {
   position: absolute;
   top: 127%;
   left: 50%;
@@ -196,7 +195,6 @@ header .logo {
   left: 34%;
 }
 
-
 .description-container {
   position: fixed;
   top: 0;
@@ -210,9 +208,14 @@ header .logo {
   background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  box-sizing: border-box; /* Asegura que el padding no incremente el tamaño del contenedor */
+  box-sizing: border-box;
+  overflow: auto;
 }
 
+.description-container p {
+  word-wrap: break-word;
+  word-break: break-word;
+}
 
 .left-side {
   flex: 1; /* Hace que esta parte ocupe el 50% del contenedor */
@@ -234,7 +237,7 @@ header .logo {
   border-radius: 5px;
   backdrop-filter: blur(10px);
   color: #fff;
-  font-size: 1em; /* Tamaño de fuente base */
+  font-size: 1em;
 }
 
 .character-image {
@@ -242,12 +245,11 @@ header .logo {
   height: auto;
 }
 
-
 .spinner-border {
   height: 50px;
   width: 50px;
   color: #000;
-  animation: spin 1s linear infinite; /* Animación de giro */
+  animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
@@ -258,7 +260,6 @@ header .logo {
     transform: rotate(360deg);
   }
 }
-
 
 /* Tablets */
 @media screen and (min-width: 40em) {
@@ -299,19 +300,12 @@ header .logo {
   }
 
   .character-info {
-
-  }
-
-  .character-image {
-
-  }
-
-  header {
-
+    font-size: 1.2em;
+    top: 75%;
   }
 
   .btn-primary {
-    //font-size: 100%;
+    font-size: 100%;
   }
 }
 
@@ -354,11 +348,8 @@ header .logo {
   }
 
   .character-info {
-
-  }
-
-  .character-image {
-
+    font-size: 1.4em;
+    top: 75%;
   }
 }
 
@@ -402,15 +393,26 @@ header .logo {
     margin-top: 30px;
   }
 
-  .character-info {
-
-  }
-
-  .character-image {
-
-  }
-
   .btn-primary {
     font-size: 100%;
   }
+
+  .character-info {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .character-image {
+    width: 70%;
+    margin: auto;
+    display: block;
+    border-radius: 10px;
+  }
+
+  .description-container {
+    padding: 20px;
+    text-align: justify;
+  }
+
 }
