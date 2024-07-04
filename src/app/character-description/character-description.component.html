@@ -10,9 +10,9 @@
   </div>
   <div class="right-side">
     <div class="character-info">
-      <h2>{{ character.name }}</h2>
-      <h4>Status: {{ character.status }}</h4>
-      <h4>Species: {{ character.species }}</h4>
+      <h2 class="character-name">{{ character.name }}</h2>
+      <h4 class="character-description-text">Status: {{ character.status }}</h4>
+      <h4 class="character-description-text">Species: {{ character.species }}</h4>
     </div>
     <img class="character-image" [src]="character.image">
   </div>

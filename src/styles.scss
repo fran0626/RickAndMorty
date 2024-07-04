@@ -209,40 +209,43 @@ header .logo img {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   box-sizing: border-box;
-  overflow: auto;
-}
-
-.description-container p {
-  word-wrap: break-word;
-  word-break: break-word;
+  overflow-y: auto;
 }
 
 .left-side {
-  flex: 1; /* Hace que esta parte ocupe el 50% del contenedor */
+  flex: 1;
   padding: 20px;
 }
 
 .right-side {
   flex: 1;
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .character-info {
   position: absolute;
   top: 75%;
-  left: 20px;
-  right: 20px;
   background-color: rgba(255, 255, 255, 0.5);
   padding: 10px;
   border-radius: 5px;
   backdrop-filter: blur(10px);
   color: #fff;
-  font-size: 1em;
+  width: 95%;
 }
 
 .character-image {
   width: 100%;
   height: auto;
+}
+
+.character-name {
+  font-size: 2em !important;
+}
+
+.character-description-text {
+  font-size: 1.5em !important;
 }
 
 .loading-overlay {
@@ -275,7 +278,7 @@ header .logo img {
 }
 
 /* Tablets */
-@media screen and (min-width: 40em) {
+@media screen and (max-width: 62em) {
   .characters--grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -312,15 +315,46 @@ header .logo img {
     margin-top: 50px;
   }
 
-  .character-info {
-    font-size: 1.2em;
-    top: 75%;
+  .description-container {
+    flex-direction: column-reverse;
+  }
+
+  .left-side, .right-side {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .character-image {
+    width: 40%;
+    margin: 0 auto 20px auto;
+  }
+
+  .left-side {
+    text-align: justify;
   }
 
   .btn-primary {
     font-size: 100%;
   }
+
+  .character-info {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35%;
+    height: 35%;
+  }
+
+  .character-info h2 {
+    font-size: 1.5em !important;
+  }
+
+  .character-info h4 {
+    font-size: 1em !important;
+  }
 }
+
 
 /* Desktop */
 @media screen and (min-width: 62em) {
@@ -358,11 +392,6 @@ header .logo img {
 
   .pagination-container {
     margin-top: 50px;
-  }
-
-  .character-info {
-    font-size: 1.4em;
-    top: 75%;
   }
 }
 
@@ -410,12 +439,6 @@ header .logo img {
     font-size: 100%;
   }
 
-  .character-info {
-    position: relative;
-    text-align: center;
-    padding: 20px;
-  }
-
   .character-image {
     width: 70%;
     margin: auto;
@@ -428,4 +451,21 @@ header .logo img {
     text-align: justify;
   }
 
+  .character-info {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35%;
+    height: 35%;
+  }
+
+  .character-info h2 {
+    font-size: 1.2em !important;
+  }
+
+  .character-info h4 {
+    font-size: 0.8em !important;
+  }
 }
+
