@@ -14,7 +14,7 @@ header {
   position: sticky;
   top: 0;
   display: flex;
-  width: 100vw; /* Utilizamos 100vw para ocupar todo el ancho de la ventana gráfica */
+  width: 100vw;
   padding: 0px 24px;
   z-index: 9999;
   box-sizing: border-box;
@@ -36,8 +36,8 @@ header .logo img {
 
 .characters-container {
   max-width: 100%;
-  overflow-x: auto; /* Permite desplazamiento horizontal si es necesario */
-  margin-bottom: 20px; /* Espacio entre las tarjetas y la paginación */
+  overflow-x: auto;
+  margin-bottom: 20px;
 }
 
 .characters--grid {
@@ -86,8 +86,8 @@ header .logo img {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px; /* Espacio entre las tarjetas y la paginación */
-  position: relative; /* Añadido */
+  margin-top: 20px;
+  position: relative;
 }
 
 .page-item {
