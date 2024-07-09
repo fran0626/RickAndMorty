@@ -99,7 +99,11 @@
           }
         },
         "deploy": {
-          "builder": "angular-cli-ghpages:deploy"
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "https://fran0626.github.io/RickAndMorty/",
+            "repo": "https://github.com/fran0626/RickAndMorty.git"
+          }
         }
       }
     }
